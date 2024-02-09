@@ -56,14 +56,18 @@ Eklediğimiz tüm kodların son haline bakalım beraber;
 
 
 satır satır ekstra hangi yapılanmalarımızı eklediğimizi izah ettik.
+
 Şimdi sıra resource dosyasını oluşturmakta;
 Öncelikli olaraktan uygulamamız içerisinde bir resource klasörü oluşturalım ve bunun altında da bir sınıf oluşturalım bu sınıfımızın ismini IStringLocalizer<> içerisinde tanımlayacağız
 
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/a62cb4d4-e95d-48cb-a29c-39da21c4db66)
 
 
+
 Burada dikkat etmemiz gereken hususlar şunlar;
+
 1.) MessageResources sınıfımızı başka bir namespace altında kullanacaksak public yapmalıyız.
+
 2.) Resource klasörüne add deyip ilk önce kullanacağımız sınıfın adını (MessageResources) ardından nokta ile program.cs de tanımladığımız tr-TR yapısını uygun şekilde yazmalıyız yoksa program bu yapıyı anlamaz ve en son olarakta .resx ile dosyayı tanımlamalıyız. => MessageResources.tr-TR.resx
 
 Resource dosyamızın içerisinde bizi karşılayan yapı Name, Value ve Comment'tir.

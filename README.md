@@ -72,12 +72,15 @@ Bunun için Web APİ projemizde bir HelloController sınıfı oluşturalım ve b
 
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/256ec5d8-13cd-4279-9de2-264ce33ed81e)
 
+
 _localizer["KEY"] buradaki KEY'i index gibi düşünelim ve .resx dosyası içerisinde verdiğimiz name değerimizi yazalım.
 Son olarakta uygulamamızın çıktısını görelim;
 İngilizce olaraktan;
+
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/f42d21e6-ba3e-4a9b-adc8-330164b97f5a)
 
 Türkçe olaraktan;
+
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/f1e9e39d-90f5-4eb6-bf60-b20c9a77da8d)
 
 

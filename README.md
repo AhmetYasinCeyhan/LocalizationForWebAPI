@@ -104,4 +104,5 @@ Türkçe olaraktan;
 
 
 NOT 1: Swagger kullandığımız için uzantı ile cultures değiştiremiyoruz ya da ben bilmiyorum bundan dolayı dil değişimini görmek için Program.cs içerisinde yazdığımız SetDefaultCulture değerini değiştirerekten değişiklikleri gözlemliyorum.
+
 NOT 2 :Eğer Swager kullanırken aynı zamanda uygulamanızı Google Chrome ile ayağa kaldırırsanız default değere bakmaksızın bilgisayarınızın ve kullandığınız uygulamanın dili neyse onu baz alacaktır. Bundan kurtulmak için Microsoft Edge ile uygulamanızı ayağa kaldırabilirsiniz.

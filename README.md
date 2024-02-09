@@ -1,3 +1,4 @@
+
 Uygulamamızda lokalizasyonu etkinleştirmek için Program.cs dosyasında bazı kodlar yazacağız. İlk olarak,
 
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/f2228fee-f318-4a12-9077-636a03f2e558)

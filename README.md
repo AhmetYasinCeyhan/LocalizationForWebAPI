@@ -1,14 +1,19 @@
 Uygulamamızda lokalizasyonu etkinleştirmek için Program.cs dosyasında bazı kodlar yazacağız. İlk olarak,
+
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/f2228fee-f318-4a12-9077-636a03f2e558)
+
 kodunu eklememiz gerekiyor.
 Bu kod, ASP.NET  Core uygulamamızda lokalizasyon özelliğini etkinleştirmek için kullanılır. Bu kod, uygulamamızın farklı dillerdeki metinlere uyum sağlayabilmesi için gerekli olan lokalizasyon hizmetlerini yapılandırır ve ekler.
 
 Daha sonra eklememiz gerek kod ise
-![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/98758ced-c89a-49a3-939f-6d5e95334544)
- kodudur,
+
+![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/98758ced-c89a-49a3-939f-6d5e95334544) kodudur,
+
 bu kod lokalizasyon ayarlarını yapılandırmak için kullanılır yani ASP.NET  Core uygulamasında hangi dillerin destekleneceğini, varsayılan dilin ne olacağını ve diğer lokalizasyon seçeneklerini belirlememize olanak tanır.
 
-Bundan sonraki adımda, bir önceki adımda bahsetmiş olduğumuz lokalizasyon ayarlarını yapmamız gerekiyor bu noktada eklememiz gereken kodlar; ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/438f035c-2c7a-46a7-a3af-2f6f80c3897f)
+Bundan sonraki adımda, bir önceki adımda bahsetmiş olduğumuz lokalizasyon ayarlarını yapmamız gerekiyor bu noktada eklememiz gereken kodlar; 
+![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/438f035c-2c7a-46a7-a3af-2f6f80c3897f)
+
 
 şimdi adım adım bu eklediğimiz kodlar ne işe yarıyor kısaca bunu izah edelim:
 
@@ -40,28 +45,38 @@ Bu, tarayıcının istekleriyle uyumlu bir şekilde uygulamanın yanıtlarının
 Bir kullanıcı Türkçe konuşan bir tarayıcı kullanıyorsa, uygulamanız yanıtlarını Türkçe olarak gönderir veya İngilizce konuşan bir tarayıcı kullanıyorsa, uygulamanız yanıtlarını İngilizce olarak gönderir.
 
 Ve artık son bir kod eklememiz gerekiyor o da tüm bu yapılandırmaları yaptıktan sonra bunu uygulamak için;
+
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/ee4515c5-5a2e-4fc1-bf55-bee4f8ae7c4a)
+
  bu kod uygulamanın başlatılması sırasında lokalizasyon ayarlarını uygulamak için kullanılır.
 Bu kod, üst tarafta yazdığımız tüm istekler üzerinden lokalizasyon ayarlarını etkinleştirir ve uygulamanın doğru bir şekilde farklı dillerdeki kullanıcılara yanıt vermesini sağlar.
 Eklediğimiz tüm kodların son haline bakalım beraber;
+
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/bcb4e475-658f-4118-ac39-ec3afd187efb)
+
 
 satır satır ekstra hangi yapılanmalarımızı eklediğimizi izah ettik.
 Şimdi sıra resource dosyasını oluşturmakta;
 Öncelikli olaraktan uygulamamız içerisinde bir resource klasörü oluşturalım ve bunun altında da bir sınıf oluşturalım bu sınıfımızın ismini IStringLocalizer<> içerisinde tanımlayacağız
+
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/a62cb4d4-e95d-48cb-a29c-39da21c4db66)
+
 
 Burada dikkat etmemiz gereken hususlar şunlar;
 1.) MessageResources sınıfımızı başka bir namespace altında kullanacaksak public yapmalıyız.
 2.) Resource klasörüne add deyip ilk önce kullanacağımız sınıfın adını (MessageResources) ardından nokta ile program.cs de tanımladığımız tr-TR yapısını uygun şekilde yazmalıyız yoksa program bu yapıyı anlamaz ve en son olarakta .resx ile dosyayı tanımlamalıyız. => MessageResources.tr-TR.resx
 
 Resource dosyamızın içerisinde bizi karşılayan yapı Name, Value ve Comment'tir.
+
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/74c8fe14-7e25-4b01-9e2a-55242ea35c90)
 
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/316cf417-2fcb-4181-adbb-2bc92a99c8e1)
 
+
 Bunlar arasındaki ilişkiyi açıklamak için bir görsel ile izah edelim
+
 ![image](https://github.com/AhmetYasinCeyhan/LocalizationForWebAPI/assets/123759576/9b9079e4-5c55-4299-9075-b7e5507ab94f)
+
 
 
 Name, her bir kaydın benzersiz bir tanımlayıcısıdır ve uygulamada bu kayda erişmek için kullanılır. Türkçe veya İngilizce gibi farklı dillerde aynı adı kullanarak, farklı içerikleri temsil edebiliriz.
